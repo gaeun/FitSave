@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BADA99BF1E86FB0D001008D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA99BE1E86FB0D001008D9 /* AppDelegate.swift */; };
+		BADA99C11E86FB0D001008D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA99C01E86FB0D001008D9 /* ViewController.swift */; };
+		BADA99C41E86FB0D001008D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADA99C21E86FB0D001008D9 /* Main.storyboard */; };
+		BADA99C71E86FB0D001008D9 /* FitSave.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BADA99C51E86FB0D001008D9 /* FitSave.xcdatamodeld */; };
+		BADA99C91E86FB0D001008D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BADA99C81E86FB0D001008D9 /* Assets.xcassets */; };
+		BADA99CC1E86FB0D001008D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADA99CA1E86FB0D001008D9 /* LaunchScreen.storyboard */; };
+		BADA99D71E86FB0D001008D9 /* FitSaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA99D61E86FB0D001008D9 /* FitSaveTests.swift */; };
+		BADA99E21E86FB0D001008D9 /* FitSaveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA99E11E86FB0D001008D9 /* FitSaveUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BADA99D31E86FB0D001008D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BADA99B31E86FB0D001008D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BADA99BA1E86FB0D001008D9;
+			remoteInfo = FitSave;
+		};
+		BADA99DE1E86FB0D001008D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BADA99B31E86FB0D001008D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BADA99BA1E86FB0D001008D9;
+			remoteInfo = FitSave;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BADA99BB1E86FB0D001008D9 /* FitSave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitSave.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BADA99BE1E86FB0D001008D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BADA99C01E86FB0D001008D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BADA99C31E86FB0D001008D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BADA99C61E86FB0D001008D9 /* FitSave.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FitSave.xcdatamodel; sourceTree = "<group>"; };
+		BADA99C81E86FB0D001008D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BADA99CB1E86FB0D001008D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BADA99CD1E86FB0D001008D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BADA99D21E86FB0D001008D9 /* FitSaveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitSaveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BADA99D61E86FB0D001008D9 /* FitSaveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitSaveTests.swift; sourceTree = "<group>"; };
+		BADA99D81E86FB0D001008D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BADA99DD1E86FB0D001008D9 /* FitSaveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitSaveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BADA99E11E86FB0D001008D9 /* FitSaveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitSaveUITests.swift; sourceTree = "<group>"; };
+		BADA99E31E86FB0D001008D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BADA99B81E86FB0D001008D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADA99CF1E86FB0D001008D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADA99DA1E86FB0D001008D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BADA99B21E86FB0D001008D9 = {
+			isa = PBXGroup;
+			children = (
+				BADA99BD1E86FB0D001008D9 /* FitSave */,
+				BADA99D51E86FB0D001008D9 /* FitSaveTests */,
+				BADA99E01E86FB0D001008D9 /* FitSaveUITests */,
+				BADA99BC1E86FB0D001008D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BADA99BC1E86FB0D001008D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BADA99BB1E86FB0D001008D9 /* FitSave.app */,
+				BADA99D21E86FB0D001008D9 /* FitSaveTests.xctest */,
+				BADA99DD1E86FB0D001008D9 /* FitSaveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BADA99BD1E86FB0D001008D9 /* FitSave */ = {
+			isa = PBXGroup;
+			children = (
+				BADA99BE1E86FB0D001008D9 /* AppDelegate.swift */,
+				BADA99C01E86FB0D001008D9 /* ViewController.swift */,
+				BADA99C21E86FB0D001008D9 /* Main.storyboard */,
+				BADA99C81E86FB0D001008D9 /* Assets.xcassets */,
+				BADA99CA1E86FB0D001008D9 /* LaunchScreen.storyboard */,
+				BADA99CD1E86FB0D001008D9 /* Info.plist */,
+				BADA99C51E86FB0D001008D9 /* FitSave.xcdatamodeld */,
+			);
+			path = FitSave;
+			sourceTree = "<group>";
+		};
+		BADA99D51E86FB0D001008D9 /* FitSaveTests */ = {
+			isa = PBXGroup;
+			children = (
+				BADA99D61E86FB0D001008D9 /* FitSaveTests.swift */,
+				BADA99D81E86FB0D001008D9 /* Info.plist */,
+			);
+			path = FitSaveTests;
+			sourceTree = "<group>";
+		};
+		BADA99E01E86FB0D001008D9 /* FitSaveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BADA99E11E86FB0D001008D9 /* FitSaveUITests.swift */,
+				BADA99E31E86FB0D001008D9 /* Info.plist */,
+			);
+			path = FitSaveUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BADA99BA1E86FB0D001008D9 /* FitSave */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BADA99E61E86FB0D001008D9 /* Build configuration list for PBXNativeTarget "FitSave" */;
+			buildPhases = (
+				BADA99B71E86FB0D001008D9 /* Sources */,
+				BADA99B81E86FB0D001008D9 /* Frameworks */,
+				BADA99B91E86FB0D001008D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FitSave;
+			productName = FitSave;
+			productReference = BADA99BB1E86FB0D001008D9 /* FitSave.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BADA99D11E86FB0D001008D9 /* FitSaveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BADA99E91E86FB0D001008D9 /* Build configuration list for PBXNativeTarget "FitSaveTests" */;
+			buildPhases = (
+				BADA99CE1E86FB0D001008D9 /* Sources */,
+				BADA99CF1E86FB0D001008D9 /* Frameworks */,
+				BADA99D01E86FB0D001008D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BADA99D41E86FB0D001008D9 /* PBXTargetDependency */,
+			);
+			name = FitSaveTests;
+			productName = FitSaveTests;
+			productReference = BADA99D21E86FB0D001008D9 /* FitSaveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BADA99DC1E86FB0D001008D9 /* FitSaveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BADA99EC1E86FB0D001008D9 /* Build configuration list for PBXNativeTarget "FitSaveUITests" */;
+			buildPhases = (
+				BADA99D91E86FB0D001008D9 /* Sources */,
+				BADA99DA1E86FB0D001008D9 /* Frameworks */,
+				BADA99DB1E86FB0D001008D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BADA99DF1E86FB0D001008D9 /* PBXTargetDependency */,
+			);
+			name = FitSaveUITests;
+			productName = FitSaveUITests;
+			productReference = BADA99DD1E86FB0D001008D9 /* FitSaveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BADA99B31E86FB0D001008D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "HSHacks Team";
+				TargetAttributes = {
+					BADA99BA1E86FB0D001008D9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					BADA99D11E86FB0D001008D9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BADA99BA1E86FB0D001008D9;
+					};
+					BADA99DC1E86FB0D001008D9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BADA99BA1E86FB0D001008D9;
+					};
+				};
+			};
+			buildConfigurationList = BADA99B61E86FB0D001008D9 /* Build configuration list for PBXProject "FitSave" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BADA99B21E86FB0D001008D9;
+			productRefGroup = BADA99BC1E86FB0D001008D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BADA99BA1E86FB0D001008D9 /* FitSave */,
+				BADA99D11E86FB0D001008D9 /* FitSaveTests */,
+				BADA99DC1E86FB0D001008D9 /* FitSaveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BADA99B91E86FB0D001008D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADA99CC1E86FB0D001008D9 /* LaunchScreen.storyboard in Resources */,
+				BADA99C91E86FB0D001008D9 /* Assets.xcassets in Resources */,
+				BADA99C41E86FB0D001008D9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADA99D01E86FB0D001008D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADA99DB1E86FB0D001008D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BADA99B71E86FB0D001008D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADA99C11E86FB0D001008D9 /* ViewController.swift in Sources */,
+				BADA99C71E86FB0D001008D9 /* FitSave.xcdatamodeld in Sources */,
+				BADA99BF1E86FB0D001008D9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADA99CE1E86FB0D001008D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADA99D71E86FB0D001008D9 /* FitSaveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BADA99D91E86FB0D001008D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADA99E21E86FB0D001008D9 /* FitSaveUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BADA99D41E86FB0D001008D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BADA99BA1E86FB0D001008D9 /* FitSave */;
+			targetProxy = BADA99D31E86FB0D001008D9 /* PBXContainerItemProxy */;
+		};
+		BADA99DF1E86FB0D001008D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BADA99BA1E86FB0D001008D9 /* FitSave */;
+			targetProxy = BADA99DE1E86FB0D001008D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BADA99C21E86FB0D001008D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BADA99C31E86FB0D001008D9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BADA99CA1E86FB0D001008D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BADA99CB1E86FB0D001008D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BADA99E41E86FB0D001008D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BADA99E51E86FB0D001008D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BADA99E71E86FB0D001008D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FitSave/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hshacksteam.FitSave;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BADA99E81E86FB0D001008D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FitSave/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hshacksteam.FitSave;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		BADA99EA1E86FB0D001008D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FitSaveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hshacksteam.FitSaveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitSave.app/FitSave";
+			};
+			name = Debug;
+		};
+		BADA99EB1E86FB0D001008D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FitSaveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hshacksteam.FitSaveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitSave.app/FitSave";
+			};
+			name = Release;
+		};
+		BADA99ED1E86FB0D001008D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = FitSaveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hshacksteam.FitSaveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = FitSave;
+			};
+			name = Debug;
+		};
+		BADA99EE1E86FB0D001008D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = FitSaveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hshacksteam.FitSaveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = FitSave;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BADA99B61E86FB0D001008D9 /* Build configuration list for PBXProject "FitSave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADA99E41E86FB0D001008D9 /* Debug */,
+				BADA99E51E86FB0D001008D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BADA99E61E86FB0D001008D9 /* Build configuration list for PBXNativeTarget "FitSave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADA99E71E86FB0D001008D9 /* Debug */,
+				BADA99E81E86FB0D001008D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BADA99E91E86FB0D001008D9 /* Build configuration list for PBXNativeTarget "FitSaveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADA99EA1E86FB0D001008D9 /* Debug */,
+				BADA99EB1E86FB0D001008D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BADA99EC1E86FB0D001008D9 /* Build configuration list for PBXNativeTarget "FitSaveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADA99ED1E86FB0D001008D9 /* Debug */,
+				BADA99EE1E86FB0D001008D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BADA99C51E86FB0D001008D9 /* FitSave.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BADA99C61E86FB0D001008D9 /* FitSave.xcdatamodel */,
+			);
+			currentVersion = BADA99C61E86FB0D001008D9 /* FitSave.xcdatamodel */;
+			path = FitSave.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BADA99B31E86FB0D001008D9 /* Project object */;
+}
