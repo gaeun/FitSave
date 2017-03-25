@@ -15,6 +15,8 @@
 		BADA99CC1E86FB0D001008D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADA99CA1E86FB0D001008D9 /* LaunchScreen.storyboard */; };
 		BADA99D71E86FB0D001008D9 /* FitSaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA99D61E86FB0D001008D9 /* FitSaveTests.swift */; };
 		BADA99E21E86FB0D001008D9 /* FitSaveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA99E11E86FB0D001008D9 /* FitSaveUITests.swift */; };
+		BADA99F81E86FE68001008D9 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA99F71E86FE68001008D9 /* HealthKitManager.swift */; };
+		BADA99FA1E86FF9F001008D9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADA99F91E86FF9F001008D9 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,9 @@
 		BADA99DD1E86FB0D001008D9 /* FitSaveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitSaveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADA99E11E86FB0D001008D9 /* FitSaveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitSaveUITests.swift; sourceTree = "<group>"; };
 		BADA99E31E86FB0D001008D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BADA99EF1E86FD88001008D9 /* FitSave.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitSave.entitlements; sourceTree = "<group>"; };
+		BADA99F71E86FE68001008D9 /* HealthKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		BADA99F91E86FF9F001008D9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BADA99FA1E86FF9F001008D9 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,7 @@
 				BADA99D51E86FB0D001008D9 /* FitSaveTests */,
 				BADA99E01E86FB0D001008D9 /* FitSaveUITests */,
 				BADA99BC1E86FB0D001008D9 /* Products */,
+				BADA99F01E86FD88001008D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,8 +106,11 @@
 		BADA99BD1E86FB0D001008D9 /* FitSave */ = {
 			isa = PBXGroup;
 			children = (
+				BADA99F61E86FE4C001008D9 /* Manager */,
+				BADA99F51E86FE42001008D9 /* View */,
+				BADA99F41E86FE3E001008D9 /* Controller */,
+				BADA99EF1E86FD88001008D9 /* FitSave.entitlements */,
 				BADA99BE1E86FB0D001008D9 /* AppDelegate.swift */,
-				BADA99C01E86FB0D001008D9 /* ViewController.swift */,
 				BADA99C21E86FB0D001008D9 /* Main.storyboard */,
 				BADA99C81E86FB0D001008D9 /* Assets.xcassets */,
 				BADA99CA1E86FB0D001008D9 /* LaunchScreen.storyboard */,
@@ -126,6 +136,37 @@
 				BADA99E31E86FB0D001008D9 /* Info.plist */,
 			);
 			path = FitSaveUITests;
+			sourceTree = "<group>";
+		};
+		BADA99F01E86FD88001008D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BADA99F91E86FF9F001008D9 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BADA99F41E86FE3E001008D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BADA99C01E86FB0D001008D9 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		BADA99F51E86FE42001008D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BADA99F61E86FE4C001008D9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				BADA99F71E86FE68001008D9 /* HealthKitManager.swift */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,7 +237,13 @@
 				TargetAttributes = {
 					BADA99BA1E86FB0D001008D9 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = WQDZUGXVC3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					BADA99D11E86FB0D001008D9 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -264,6 +311,7 @@
 			files = (
 				BADA99C11E86FB0D001008D9 /* ViewController.swift in Sources */,
 				BADA99C71E86FB0D001008D9 /* FitSave.xcdatamodeld in Sources */,
+				BADA99F81E86FE68001008D9 /* HealthKitManager.swift in Sources */,
 				BADA99BF1E86FB0D001008D9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +462,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FitSave/FitSave.entitlements;
+				DEVELOPMENT_TEAM = WQDZUGXVC3;
 				INFOPLIST_FILE = FitSave/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hshacksteam.FitSave;
@@ -426,6 +476,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FitSave/FitSave.entitlements;
+				DEVELOPMENT_TEAM = WQDZUGXVC3;
 				INFOPLIST_FILE = FitSave/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hshacksteam.FitSave;
