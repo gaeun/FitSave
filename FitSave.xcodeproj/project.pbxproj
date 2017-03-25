@@ -16,7 +16,7 @@
 		BADA99D71E86FB0D001008D9 /* FitSaveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA99D61E86FB0D001008D9 /* FitSaveTests.swift */; };
 		BADA99E21E86FB0D001008D9 /* FitSaveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA99E11E86FB0D001008D9 /* FitSaveUITests.swift */; };
 		BADA99FE1E87031A001008D9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADA99FD1E87031A001008D9 /* HealthKit.framework */; };
-		BADA9A021E8707C0001008D9 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA9A011E8707C0001008D9 /* DashboardViewController.swift */; };
+		BADA9A041E87232E001008D9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA9A031E87232E001008D9 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +53,7 @@
 		BADA99E31E86FB0D001008D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BADA99EF1E86FD88001008D9 /* FitSave.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitSave.entitlements; sourceTree = "<group>"; };
 		BADA99FD1E87031A001008D9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		BADA9A011E8707C0001008D9 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		BADA9A031E87232E001008D9 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,13 +108,13 @@
 			children = (
 				BADA99EF1E86FD88001008D9 /* FitSave.entitlements */,
 				BADA99C01E86FB0D001008D9 /* ViewController.swift */,
+				BADA9A031E87232E001008D9 /* TableViewCell.swift */,
 				BADA99BE1E86FB0D001008D9 /* AppDelegate.swift */,
 				BADA99C21E86FB0D001008D9 /* Main.storyboard */,
 				BADA99C81E86FB0D001008D9 /* Assets.xcassets */,
 				BADA99CA1E86FB0D001008D9 /* LaunchScreen.storyboard */,
 				BADA99CD1E86FB0D001008D9 /* Info.plist */,
 				BADA99C51E86FB0D001008D9 /* FitSave.xcdatamodeld */,
-				BADA9A011E8707C0001008D9 /* DashboardViewController.swift */,
 			);
 			path = FitSave;
 			sourceTree = "<group>";
@@ -288,10 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BADA9A041E87232E001008D9 /* TableViewCell.swift in Sources */,
 				BADA99C11E86FB0D001008D9 /* ViewController.swift in Sources */,
 				BADA99C71E86FB0D001008D9 /* FitSave.xcdatamodeld in Sources */,
 				BADA99BF1E86FB0D001008D9 /* AppDelegate.swift in Sources */,
-				BADA9A021E8707C0001008D9 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
