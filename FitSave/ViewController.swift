@@ -7,31 +7,24 @@
 //
 
 import UIKit
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+import SideMenu
+
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, LeftNavigationViewControllerDelegate {
     
     var myTableView: UITableView  =   UITableView()
     var itemsToLoad: [String] = ["Nike", "Chipotle", "Boething"]
     var fitnessPointsArray: [String] = ["75,000 points", "25,000 points", "10,000 points"]
+    let leftNavigator = LeftNavigationViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 320, height: 44))
-        // self.view.addSubview(navBar);
-        // let navItem = UINavigationItem(title: "Dashboard");
-        // navBar.setItems([navItem], animated: true);
-        
-        let btn: UIButton = UIButton(frame: CGRect(x: 10, y: 10, width: 100, height: 50))
-        btn.backgroundColor = UIColor.green
-        btn.setTitle("Click Me", for: .normal)
-        btn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        btn.tag = 1
-        self.view.addSubview(btn)
-        
         let screenSize: CGRect = UIScreen.main.bounds
         
         let screenWidth = screenSize.width
+        let screenHeight = screenSize.height
+        
         
         self.view.backgroundColor = UIColor(red:0.62, green:0.86, blue:0.62, alpha:1.0)
         
@@ -68,21 +61,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         fitnessPointsLabel.textColor = UIColor.white
         fitnessPointsLabel.font = UIFont(name: "OpenSans-Light", size: 18)
         self.view.addSubview(fitnessPointsLabel)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Get main screen bounds
-        let screenSize: CGRect = UIScreen.main.bounds
-        
-        let screenWidth = screenSize.width
-        let screenHeight = screenSize.height
         
         myTableView.frame = CGRectMake(0, 292, screenWidth, screenHeight-292);
         myTableView.dataSource = self
@@ -92,22 +70,43 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.view.addSubview(myTableView)
         
+        // Button
+        let btn: UIButton = UIButton(frame: CGRect(x: screenWidth-70, y: screenHeight-70, width: 50, height: 50))
+        btn.layer.cornerRadius = 0.5 * btn.bounds.size.width
+        btn.backgroundColor = UIColor(red:0.41, green:0.55, blue:0.41, alpha:1.0)
+        btn.setImage(UIImage(named:"Menu"), for: .normal)
+        btn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        btn.tag = 1
+        self.view.addSubview(btn)
+        
+        setupSideMenu()
+    }
+    
+    fileprivate func setupSideMenu() {
+        leftNavigator.delegate = self
+        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: leftNavigator)
+        menuLeftNavigationController.leftSide = true
+        SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
+        
+        // Enable gestures. The left and/or right menus must be set up above for these to work.
+        // Note that these continue to work on the Navigation Controller independent of the View Controller it displays!
+        SideMenuManager.menuAddPanGestureToPresent(toView: leftNavigator.navigationController!.navigationBar)
+        SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: leftNavigator.navigationController!.view)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     func buttonAction(sender: UIButton!) {
-        
-        let screenSize: CGRect = UIScreen.main.bounds
-        let screenWidth = screenSize.width
-        let screenHeight = screenSize.height
-        
-        let btnsendtag: UIButton = sender
-        if btnsendtag.tag == 1 {
-            let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight*0.1))
-            self.view.addSubview(navBar);
-            let navItem = UINavigationItem(title: "Dashboard");
-            let navItem2 = UINavigationItem(title: "Dashboard2");
-            navBar.setItems([navItem, navItem2], animated: true);
-        }
+        setupSideMenu()
+        self.present(SideMenuManager.menuLeftNavigationController!, animated: true, completion: nil)
+
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -138,6 +137,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func CGRectMake(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> CGRect {
         return CGRect(x: x, y: y, width: width, height: height)
+    }
+    
+    func onClickSignup() {
+        dismiss(animated: true, completion: nil)
+        let signupView = SignUpViewController()
+        self.present(signupView, animated: true, completion: nil)
     }
     
 }

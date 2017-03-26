@@ -10,6 +10,9 @@
 		5E2DD1170005D29B4A16FE50 /* Pods_FitSave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39FBF00C803B18A117E79765 /* Pods_FitSave.framework */; };
 		8A032D78D87B83BC6DB35084 /* Pods_FitSaveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3C193EEA406286972AAAFF /* Pods_FitSaveTests.framework */; };
 		94F4F4AA37CC51ADA9C952B0 /* Pods_FitSaveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5D2D000A9C090CB00EB0D9 /* Pods_FitSaveUITests.framework */; };
+		BAB054F71E878C4500F54C13 /* LeftNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB054F61E878C4500F54C13 /* LeftNavigationViewController.swift */; };
+		BAB054F91E878DB900F54C13 /* NavbarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB054F81E878DB900F54C13 /* NavbarTableViewCell.swift */; };
+		BAB054FB1E879CF800F54C13 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB054FA1E879CF800F54C13 /* SignUpViewController.swift */; };
 		BADA99BF1E86FB0D001008D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA99BE1E86FB0D001008D9 /* AppDelegate.swift */; };
 		BADA99C11E86FB0D001008D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA99C01E86FB0D001008D9 /* ViewController.swift */; };
 		BADA99C41E86FB0D001008D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADA99C21E86FB0D001008D9 /* Main.storyboard */; };
@@ -60,6 +63,9 @@
 		79D1697F6DFE9A341D6C3A97 /* Pods-FitSave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitSave.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitSave/Pods-FitSave.release.xcconfig"; sourceTree = "<group>"; };
 		893DD437596D5BAB07A34615 /* Pods-FitSaveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitSaveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitSaveTests/Pods-FitSaveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF3C193EEA406286972AAAFF /* Pods_FitSaveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitSaveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAB054F61E878C4500F54C13 /* LeftNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftNavigationViewController.swift; sourceTree = "<group>"; };
+		BAB054F81E878DB900F54C13 /* NavbarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavbarTableViewCell.swift; sourceTree = "<group>"; };
+		BAB054FA1E879CF800F54C13 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BADA99BB1E86FB0D001008D9 /* FitSave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitSave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADA99BE1E86FB0D001008D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BADA99C01E86FB0D001008D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +218,9 @@
 				BADA99C01E86FB0D001008D9 /* ViewController.swift */,
 				BADA9A031E87232E001008D9 /* TableViewCell.swift */,
 				BADA9A071E8734C2001008D9 /* HealthKitManager.swift */,
+				BAB054F61E878C4500F54C13 /* LeftNavigationViewController.swift */,
+				BAB054F81E878DB900F54C13 /* NavbarTableViewCell.swift */,
+				BAB054FA1E879CF800F54C13 /* SignUpViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -532,9 +541,12 @@
 			files = (
 				BADA9A041E87232E001008D9 /* TableViewCell.swift in Sources */,
 				BADA99C11E86FB0D001008D9 /* ViewController.swift in Sources */,
+				BAB054FB1E879CF800F54C13 /* SignUpViewController.swift in Sources */,
+				BAB054F91E878DB900F54C13 /* NavbarTableViewCell.swift in Sources */,
 				BADA99C71E86FB0D001008D9 /* FitSave.xcdatamodeld in Sources */,
 				BADA9A081E8734C2001008D9 /* HealthKitManager.swift in Sources */,
 				BADA99BF1E86FB0D001008D9 /* AppDelegate.swift in Sources */,
+				BAB054F71E878C4500F54C13 /* LeftNavigationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,10 +29,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SideMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5C7DC6631E79E0D4C0A734C65BE65B70</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,17 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B242EB69E9E362D971408A18F56F082</key>
+		<key>893E56B460985AC8C77C98F35E7AFC55</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A6704A38D6CBF81CE7E99ADAC8495C7D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E37727F0331158B4FC85B5944CE3A447</key>
 		<dict>
 			<key>primary</key>
 			<true/>
