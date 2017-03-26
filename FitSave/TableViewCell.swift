@@ -25,7 +25,6 @@ class TableViewCell: UITableViewCell {
         let gap : CGFloat = 13
         let labelHeight: CGFloat = 30
         let labelWidth: CGFloat = 150
-        let lineGap : CGFloat = 5
         let label2Y : CGFloat = gap + labelHeight
         let imageSizeX : CGFloat = 105
         let imageSizeY : CGFloat = 61

@@ -6,19 +6,25 @@
 //  Copyright © 2017 HSHacks Team. All rights reserved.
 //
 
+import Foundation
 import UIKit
-import CoreLocation
 import HealthKit
 
-class TimerViewController: UIViewController, CLLocationManagerDelegate {
+class HealthKitManager {
+    let healthStore = HKHealthStore()
     
-    var zeroTime = TimeInterval()
-    var timer : Timer = Timer()
-    
-    let locationManager = CLLocationManager()
-    var startLocation: CLLocation!
-    var lastLocation: CLLocation!
-    var distanceTraveled = 0.0
-    
-    let healthManager:HealthKitManager = HealthKitManager()
+    func authorizeHealthKit() -> Bool {
+        var isEnabled = true
+        
+        if HKHealthStore.isHealthDataAvailable() {
+            let stepsCount = NSSet(object: HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount) ?? 0)
+            healthStore.requestAuthorization(toShare: nil, read: stepsCount as? Set<HKObjectType>) {
+                (success, error) -> Void in
+                isEnabled = success
+            }
+        } else {
+            isEnabled = false
+        }
+        return isEnabled
+    }
 }
