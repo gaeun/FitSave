@@ -12,6 +12,9 @@ import FirebaseAuth
 
 class SignUpViewController: UIViewController {
     
+    var emailTextField: UITextField = UITextField(frame: CGRect(x: 32, y: 278, width: 310, height: 41))
+    var passwordTextField: UITextField = UITextField(frame: CGRect(x: 33, y: 390, width: 310, height: 41))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"LoginBackground")!)
@@ -31,13 +34,7 @@ class SignUpViewController: UIViewController {
         emailLabel.textColor = UIColor.white
         self.view.addSubview(emailLabel)
         
-        // Email address text field
-        let emailTextField = UITextField(frame: CGRect(x: 32, y: 278, width: 310, height: 41))
-        emailTextField.placeholder = "Enter email address"
-        emailTextField.font = UIFont(name: "OpenSans", size: 18)
-        emailTextField.borderStyle = UITextBorderStyle.roundedRect
-        emailTextField.backgroundColor = UIColor.white
-        self.view.addSubview(emailTextField)
+        
         
         // Password label
         let passwordLabel = UILabel(frame: CGRect(x: 33, y: 356, width: 300, height: 24))
@@ -46,13 +43,7 @@ class SignUpViewController: UIViewController {
         passwordLabel.textColor = UIColor.white
         self.view.addSubview(passwordLabel)
         
-        // Password text field
-        let passwordTextField = UITextField(frame: CGRect(x: 33, y: 390, width: 310, height: 41))
-        passwordTextField.placeholder = "Enter password"
-        passwordTextField.font = UIFont(name: "OpenSans", size: 18)
-        passwordTextField.borderStyle = UITextBorderStyle.roundedRect
-        passwordTextField.backgroundColor = UIColor.white
-        self.view.addSubview(passwordTextField)
+        
         
         // Login Button
         let loginButton: UIButton = UIButton(frame: CGRect(x: 75, y: 538, width: 71, height: 30))
@@ -71,12 +62,96 @@ class SignUpViewController: UIViewController {
         self.view.addSubview(signupButton)
     }
     
-    func loginButtonAction(sender: UIButton!) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        // Email address text field
+        //let emailTextField = UITextField(frame: CGRect(x: 32, y: 278, width: 310, height: 41))
+        self.view.addSubview(emailTextField)
+        emailTextField.placeholder = "Enter email address"
+        emailTextField.font = UIFont(name: "OpenSans", size: 18)
+        emailTextField.borderStyle = UITextBorderStyle.roundedRect
+        emailTextField.backgroundColor = UIColor.white
+        
+        // Password text field
+        //let passwordTextField = UITextField(frame: CGRect(x: 33, y: 390, width: 310, height: 41))
+        passwordTextField.placeholder = "Enter password"
+        passwordTextField.font = UIFont(name: "OpenSans", size: 18)
+        passwordTextField.borderStyle = UITextBorderStyle.roundedRect
+        passwordTextField.backgroundColor = UIColor.white
+        self.view.addSubview(passwordTextField)
+        print("came here")
+    }
+    
+    
+    func loginButtonAction(sender: UIButton!) {
+        if self.emailTextField.text == "" || self.passwordTextField.text == "" {
+            
+            //Alert to tell the user that there was an error because they didn't fill anything in the textfields because they didn't fill anything in
+            
+            let alertController = UIAlertController(title: "Error", message: "Please enter an email and password.", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+            
+        } else {
+            
+            FIRAuth.auth()?.signIn(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (user, error) in
+                
+                if error == nil {
+                    
+                    //Print into the console if successfully logged in
+                    print("You have successfully logged in")
+                    
+                    //Go to the HomeViewController if the login is sucessful
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                    self.present(vc!, animated: true, completion: nil)
+                    
+                } else {
+                    
+                    //Tells the user that there is an error and then gets firebase to tell them the error
+                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
     }
     
     func signupButtonAction(sender: UIButton!) {
-        
+        if emailTextField.text == "" {
+            let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+            
+        } else {
+            FIRAuth.auth()?.createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+                
+                if error == nil {
+                    print("You have successfully signed up")
+                    //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
+                    
+                    // let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                    // self.present(vc!, animated: true, completion: nil)
+                    
+                } else {
+                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
     }
     
     
