@@ -14,7 +14,7 @@ class TableViewCell: UITableViewCell {
     var myLabel1: UILabel!
     var myLabel2: UILabel!
     var brandImage: UIImage!
-    
+    var logos: [String] = ["NikeLogo", "ChipotleLogo", "BoethingLogo"]
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:)")
     }
@@ -39,7 +39,8 @@ class TableViewCell: UITableViewCell {
         myLabel2.textColor = UIColor.black
         contentView.addSubview(myLabel2)
         
-        brandImage = UIImage(named: "NikeLogo")!
+        
+        brandImage = UIImage()
         let BrandImageView = UIImageView(image: brandImage)
         BrandImageView.frame = CGRectMake(gap, gap, imageSizeX, imageSizeY)
         contentView.addSubview(BrandImageView)
@@ -47,5 +48,16 @@ class TableViewCell: UITableViewCell {
     
     func CGRectMake(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> CGRect {
         return CGRect(x: x, y: y, width: width, height: height)
+    }
+
+    public func getBrandImage(x: Int) {
+        let gap : CGFloat = 13
+        let imageSizeX : CGFloat = 105
+        let imageSizeY : CGFloat = 61
+        
+        brandImage = UIImage(named: logos[x])
+        let BrandImageView = UIImageView(image: brandImage)
+        BrandImageView.frame = CGRectMake(gap, gap, imageSizeX, imageSizeY)
+        contentView.addSubview(BrandImageView)
     }
 }

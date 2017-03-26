@@ -13,15 +13,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var itemsToLoad: [String] = ["Nike", "Chipotle", "Boething"]
     var fitnessPointsArray: [String] = ["75,000 points", "25,000 points", "10,000 points"]
     
-    var logoImage: [UIImage] = [
-        UIImage(named: "NikeLogo")!,
-        UIImage(named: "ChipotleLogo")!,
-        UIImage(named: "BoethingLogo")!
-    ]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 320, height: 44))
+        // self.view.addSubview(navBar);
+        // let navItem = UINavigationItem(title: "Dashboard");
+        // navBar.setItems([navItem], animated: true);
+        
+        let btn: UIButton = UIButton(frame: CGRect(x: 10, y: 10, width: 100, height: 50))
+        btn.backgroundColor = UIColor.green
+        btn.setTitle("Click Me", for: .normal)
+        btn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        btn.tag = 1
+        self.view.addSubview(btn)
         
         let screenSize: CGRect = UIScreen.main.bounds
         
@@ -34,6 +40,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         label.backgroundColor = UIColor(red:0.41, green:0.55, blue:0.41, alpha:1.0)
         label.textAlignment = .center
         label.text = "Deals Near You"
+        label.font = UIFont(name: "OpenSans", size: 16)
         label.textColor = UIColor.white
         self.view.addSubview(label)
         
@@ -59,6 +66,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         fitnessPointsLabel.textAlignment = .center
         fitnessPointsLabel.text = "fitness points"
         fitnessPointsLabel.textColor = UIColor.white
+        fitnessPointsLabel.font = UIFont(name: "OpenSans-Light", size: 18)
         self.view.addSubview(fitnessPointsLabel)
     }
     
@@ -86,6 +94,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    func buttonAction(sender: UIButton!) {
+        
+        let screenSize: CGRect = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        let screenHeight = screenSize.height
+        
+        let btnsendtag: UIButton = sender
+        if btnsendtag.tag == 1 {
+            let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight*0.1))
+            self.view.addSubview(navBar);
+            let navItem = UINavigationItem(title: "Dashboard");
+            let navItem2 = UINavigationItem(title: "Dashboard2");
+            navBar.setItems([navItem, navItem2], animated: true);
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 85
     }
@@ -97,10 +121,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = TableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "myIdentifier")
+        let cell = TableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "myIdentifier") as TableViewCell
         cell.myLabel1.text = itemsToLoad[indexPath.row]
+        cell.myLabel1.font = UIFont(name: "OpenSans-Light", size: 17)
         cell.myLabel2.text = fitnessPointsArray[indexPath.row]
-        cell.brandImage = logoImage[indexPath.row]
+        cell.myLabel2.font = UIFont(name: "OpenSans-Light", size: 14)
+        cell.getBrandImage(x: indexPath.row)
+        
         return cell
     }
     
@@ -108,6 +135,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     {
         print("User selected table row \(indexPath.row) and item \(itemsToLoad[indexPath.row])")
     }
+    
     func CGRectMake(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> CGRect {
         return CGRect(x: x, y: y, width: width, height: height)
     }
